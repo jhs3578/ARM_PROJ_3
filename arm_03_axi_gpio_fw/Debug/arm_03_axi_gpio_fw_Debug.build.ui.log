@@ -1,0 +1,30 @@
+2024-05-16T14:23:39.323601900255-14:23:39 **** Incremental Build of configuration Debug for project arm_03_axi_gpio_fw ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-'Building file: ../src/main.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/project/ZYNQ_MINI_PROJ/arm_03_axi_gpio_inout/vitis/arm_03_axi_gpio_inout/export/arm_03_axi_gpio_inout/sw/arm_03_axi_gpio_inout/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+000-'Finished building: ../src/main.c'
+000-' '
+000-'Building file: ../src/platform.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/project/ZYNQ_MINI_PROJ/arm_03_axi_gpio_inout/vitis/arm_03_axi_gpio_inout/export/arm_03_axi_gpio_inout/sw/arm_03_axi_gpio_inout/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+000-'Finished building: ../src/platform.c'
+000-' '
+000-'Building target: arm_03_axi_gpio_fw.elf'
+000-'Invoking: ARM v7 gcc linker'
+000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/project/ZYNQ_MINI_PROJ/arm_03_axi_gpio_inout/vitis/arm_03_axi_gpio_inout/export/arm_03_axi_gpio_inout/sw/arm_03_axi_gpio_inout/standalone_domain/bsplib/lib -o "arm_03_axi_gpio_fw.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000-'Finished building target: arm_03_axi_gpio_fw.elf'
+000-' '
+000-'Invoking: ARM v7 Print Size'
+000-arm-none-eabi-size arm_03_axi_gpio_fw.elf  |tee "arm_03_axi_gpio_fw.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-  30586	   2216	  22680	  55482	   d8ba	arm_03_axi_gpio_fw.elf
+000-'Finished building: arm_03_axi_gpio_fw.elf.size'
+000-' '
+00255-
+14:23:41 Build Finished (took 2s.387ms)
+
